@@ -1,0 +1,32 @@
+.loadingOverlay :global(._loading_overlay_overlay) {
+  background: #65cacd;
+}
+
+.container {
+  min-height: 100dvh;
+}
+
+.header {
+  align-items: center;
+  border-bottom: 1px solid #d2d2d2;
+  display: flex;
+  height: var(--header-height);
+  padding: 0 12px 0 clamp(12px, 2.5dvw, 18px);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.myMenu :global(.szh-menu) {
+  scale: 1.5;
+}
+
+.userImageButton {
+  border-radius: 50dvmax;
+  height: 36px;
+  overflow: hidden;
+  position: relative;
+  width: 36px;
+}

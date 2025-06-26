@@ -1,0 +1,42 @@
+.container {
+  align-items: center;
+  background: #65cacd;
+  color: #fff;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+}
+
+.content {
+  display: grid;
+  gap: 36px;
+}
+
+.textsContainer {
+  display: grid;
+  gap: 6px;
+}
+
+.h1 {
+  font-size: 6.5rem;
+}
+
+.catchCopy {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.link {
+  background: #319795;
+  border-radius: 50dvmax;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 12px 24px;
+}

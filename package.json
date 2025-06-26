@@ -54,8 +54,8 @@
   "private": true,
   "scripts": {
     "lefthook": "npx lefthook run pre-commit",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint apps/web/src --ext .ts,.tsx",
+    "lint:fix": "eslint apps/web/src --ext .ts,.tsx --fix",
     "lint:secret": "npx secretlint --maskSecrets '**/*'",
     "lint:style": "stylelint --fix '**/*.css'",
     "prettier": "prettier --write .",

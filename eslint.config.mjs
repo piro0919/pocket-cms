@@ -22,7 +22,7 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
 });
 const eslintConfig = defineConfig([
-  globalIgnores(["**/next.config.ts"]),
+  globalIgnores(["**/next.config.ts", "**/*.{js,mjs}"]),
   {
     files: ["**/*.{ts,tsx}"],
   },
@@ -42,7 +42,7 @@ const eslintConfig = defineConfig([
       ecmaVersion: 2024,
       parser: tsParser,
       parserOptions: {
-        project: ["./tsconfig.json"],
+        project: ["./tsconfig.json", "./apps/web/tsconfig.json"],
         warnOnUnsupportedTypeScriptVersion: false,
       },
       sourceType: "module",
@@ -58,7 +58,7 @@ const eslintConfig = defineConfig([
       "write-good-comments": writeGoodComments,
     },
     rules: {
-      "@next/next/no-html-link-for-pages": "error",
+      "@next/next/no-html-link-for-pages": ["error", "apps/web/src/app"],
       "@next/next/no-img-element": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": [
@@ -84,6 +84,23 @@ const eslintConfig = defineConfig([
       "import/prefer-default-export": "error",
       "no-duplicate-imports": "error",
       "no-multiple-empty-lines": ["error", { max: 1 }],
+      "no-restricted-imports": [
+        "error",
+        {
+          name: "next/link",
+          message: "Please import from `@/i18n/navigation` instead.",
+        },
+        {
+          name: "next/navigation",
+          importNames: [
+            "redirect",
+            "permanentRedirect",
+            "useRouter",
+            "usePathname",
+          ],
+          message: "Please import from `@/i18n/navigation` instead.",
+        },
+      ],
       "padding-line-between-statements": [
         "error",
         {

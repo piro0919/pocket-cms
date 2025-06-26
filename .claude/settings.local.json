@@ -3,7 +3,21 @@
     "allow": [
       "Bash(npm i:*)",
       "Bash(claude doctor)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(tsc:*)",
+      "Bash(rm:*)",
+      "Bash(claude --version)",
+      "Bash(node:*)",
+      "Bash(npm --version)",
+      "Bash(npx lefthook:*)",
+      "Bash(ls:*)",
+      "Bash(npm ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(cat:*)"
     ],
     "deny": []
   }
